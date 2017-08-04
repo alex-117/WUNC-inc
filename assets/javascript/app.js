@@ -4,3 +4,11 @@
 	//Profile parent
 
 	//profile child 
+
+
+
+
+
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+})
