@@ -16,4 +16,5 @@
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div
-		//including check box that displays congrats gif
+		//including check box that displays congrats gif.
+		
