@@ -21,12 +21,9 @@
 //html js
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
-})
 //for the modal
-$(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-  });
+	 $('.modal').modal();
+})
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div
@@ -80,10 +77,10 @@ $(document).ready(function(){
 // var database = firebase.database();
 
 
-// ----------------Adding tasks to the task list
+// //----------------Adding tasks to the task list
 
 
-//when the modal is open and user selects add task
+// //when the modal is open and user selects add task
 // $('#addTask').on('click', function(){
 // 	//task inout panel is now .show()
 // 	$('#taskPanel').show();
@@ -122,28 +119,28 @@ $(document).ready(function(){
 
 
 
-// -------Create Firebase event for adding tasks to the database and a row in the html when a user adds an entry
+// //-------Create Firebase event for adding tasks to the database and a row in the html when a user adds an entry
 
-	// database.ref().on("child_added", function (snapshot) {
+// 	database.ref().on("child_added", function (snapshot) {
 
-	// console.log(snapshot.val());
+// 	console.log(snapshot.val());
 
-	// // Store user task input data into a variable. This is for firebase.
-	// var taskName = snapshot.val().name;
-	// var taskReward = snapshot.val().reward;
-	// var taskDueBy = snapshot.val().dueBy;
+// 	// Store user task input data into a variable. This is for firebase.
+// 	var taskName = snapshot.val().name;
+// 	var taskReward = snapshot.val().reward;
+// 	var taskDueBy = snapshot.val().dueBy;
 
-	// // test to make sure it works
-	// console.log(taskName);
-	// console.log(taskReward);
-	// console.log(taskDueBy);
+// 	// test to make sure it works
+// 	console.log(taskName);
+// 	console.log(taskReward);
+// 	console.log(taskDueBy);
 
-	//append data to parent page
-	//$('...').append("<tr><td>" + taskName + "</td><td>" + taskReward + "</td><td>" +
-	//taskDueBy + (edit icon) + (trach icon) + "</td></tr>");
+// 	//append data to parent page
+// 	$('...').append("<tr><td>" + taskName + "</td><td>" + taskReward + "</td><td>" +
+// 	taskDueBy + (edit icon) + (trach icon) + "</td></tr>");
 
-	//append data to child page
-	//$('...').append("<tr><td>" + (check box icon) + taskName + "</td><td>" + "</td><td>" +
-	//taskDueBy + (more info icon) +"</td></tr>");
-//});
+// 	//append data to child page
+// 	$('...').append("<tr><td>" + (check box icon) + taskName + "</td><td>" + "</td><td>" +
+// 	taskDueBy + (more info icon) +"</td></tr>");
+// });
 

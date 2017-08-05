@@ -159,11 +159,11 @@
         <li class="tab col s3"><a class="active" href="#test1">Jan</a></li>
         <li class="tab col s3"><a href="#test2">Bobby</a></li>
         <li class="tab col s3"><a href="#test3">Dad</a></li>
-        <li class="tab col s3"><a href="#test4">blank</a></li>
+        <li class="tab col s3"><a href="#test4">+Add New</a></li>
       </ul>
     </div>
     <!--first tab, person 1-->
-    <div id="test1" class="col s12"> <!--table for person 1 task info-->
+    <div id="test1" class="col s12"> <!--table for person  task info-->
   <table>
         <thead>
           <tr>
@@ -183,24 +183,92 @@
           </tr>
         </tbody>
       </table>
-     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+     	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
     </div>
-    </div></div>
     <!--second tab-->
-    <div id="test2" class="col s12">Test 2</div>
+       <div id="test2" class="col s12"> <!--table for person task info-->
+  <table>
+        <thead>
+          <tr>
+              <th>Description</th>
+              <th>Points</th>
+              <th>Status</th>
+              <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Laundry</td>
+            <td>5</td>
+            <td>Not Complete</td>
+            <td>trash can/edit pencil</td>
+          </tr>
+        </tbody>
+      </table>
+     	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
+    </div>
     <!--Third tab-->
-    <div id="test3" class="col s12">Test 3</div>
+        <div id="test3" class="col s12"> <!--table for person task info-->
+  <table>
+        <thead>
+          <tr>
+              <th>Description</th>
+              <th>Points</th>
+              <th>Status</th>
+              <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Laundry</td>
+            <td>5</td>
+            <td>Not Complete</td>
+            <td>trash can/edit pencil</td>
+          </tr>
+        </tbody>
+      </table>
+     	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
+    </div>
     <!--Fourth tag-->
-    <div id="test4" class="col s12">Test 4</div>
-  </div>
- 	
-	<a class="waves-effect waves-light btn"><i class="material-icons left">add</i>Add Task</a>
+    <div id="test4" class="col s12">
+		 <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="New User Name" id="first_name" type="text" class="validate">
+          <label for="first_name"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+              		<div class="file-field input-field">
+      			<div class="btn"><span>Add Image</span>
+        			<input type="file">
+      			</div>
+      		<div class="file-path-wrapper">
+        		<input class="file-path validate" type="text">
+      		</div>
+    		</div>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn submit">Submit</a>
+  	</form>
+  	</div>
+    </div>
+     
+  	</div>
+  	<div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+
+
   </div>
 
 
 	<!-- jQuery -->
-	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<!-- Compiled and minified JavaScript -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   	<!-- local app.js -->
