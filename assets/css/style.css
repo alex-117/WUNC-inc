@@ -42,14 +42,11 @@ nav .brand-logo {
 .family-photo img {
 	width: 100%;
 }
-
-
 /*mobile collapse*/
 
 .side-nav {
 	text-align: center;
 }
-
 
 /*Section: Main*/
 .main-content {
@@ -57,17 +54,29 @@ nav .brand-logo {
 	text-align: center;
 }
 
-.row .col {
+ .row {
 	float: left;
 	width: 100%;
 	margin: 0 auto;
+} 
+
+.table-head {
+	/* position: absolute; */
+
+	/* top: 65px; */
 }
 
- 
-.card {
-	 height: 300px; 
+.task {
+	width: 275px;
 }
 
-.card-image {
-	 width: 200px; 
+/* .due-by {
+	position: absolute;
+	left: 300px;
 }
+
+.test {
+	position: relative;
+	 left: 60px; 
+} */
+
