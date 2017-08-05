@@ -8,21 +8,22 @@ body {
 	background-color: #28353D;
 }
 
-
-
-
 /*Header*/
-
-
 nav {
 	background-color: #28353D;
 }
-.nav-wrapper {
-	margin: 15px;
+
+nav .brand-logo {
+    /* position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0; */
+    margin-left: 20px;
 }
 
-
 /*Task ++ green color */
+
 .navbar-logo {
 	color: #99cc33;
 }
@@ -35,11 +36,13 @@ nav {
 .family-photo {
 	width: 50px;
 	height: 50px;
+	margin: 10px -6px;
 }
 
 .family-photo img {
 	width: 100%;
 }
+
 
 /*mobile collapse*/
 
@@ -47,36 +50,24 @@ nav {
 	text-align: center;
 }
 
-/*Section: Main*/
 
-.main-content { 
+/*Section: Main*/
+.main-content {
 	width: 100%;
 	text-align: center;
 }
 
 .row .col {
-	float: none;
+	float: left;
 	width: 100%;
 	margin: 0 auto;
-	display: inline-block;
 }
 
-/*.card {
-	height: 300px;
+ 
+.card {
+	 height: 300px; 
 }
 
 .card-image {
-	width: 200px;
+	 width: 200px; 
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
