@@ -14,6 +14,16 @@
 				
 
 
+	//profile child 
+
+
+
+\\html js
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+})
+=======
+
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div
@@ -133,3 +143,4 @@ $('#applyTask').on("click", function (event) {
 	$('...').append("<tr><td>" + (check box icon) + taskName + "</td><td>" + "</td><td>" +
 	taskDueBy + (more info icon) +"</td></tr>");
 });
+
