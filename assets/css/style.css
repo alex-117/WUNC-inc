@@ -48,6 +48,7 @@ nav .brand-logo {
 	text-align: center;
 }
 
+
 /*Section: Main*/
 .main-content {
 	width: 100%;
@@ -60,9 +61,85 @@ nav .brand-logo {
 	margin: 0 auto;
 } 
 
+.table-head {
+	/* position: absolute; */
+
+	/* top: 65px; */
+}
+
 .task {
 	width: 275px;
 }
 
 
+
+/*----------modal----------*/
+
+
+.modal {
+	background-color: white;
+	height: 50%;
+}
+
+.tabs .tab a:hover {
+    background-color: transparent;
+    color: #000;
+	font-weight: 900;
+}
+
+.tabs .tab a:focus {
+    background-color: transparent;
+    color: #000;
+	font-weight: 900;
+}
+
+
+.tabs .tab a {
+    color: #808080;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: color .28s ease;
+    transition: color .28s ease;
+    font-weight: light;
+}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: black;
+    will-change: left, right;
+}
+
+.btn.add-task, .btn.submit {
+	max-width: 190px;
+    margin: 25px auto!important;
+    position: relative;
+    display: block;
+    background-color: #99cc33;
+}
+
+.modal-footer {
+    border-radius: 0 0 2px 2px;
+    background-color: white;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+    text-align: right;
+}
+
+/* .due-by {
+	position: absolute;
+	left: 300px;
+}
+
+.test {
+	position: relative;
+	 left: 60px; 
+} */
 
