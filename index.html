@@ -1,132 +1,174 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Task++</title>
-	<link rel="icon" href="assets/image/favicon.png" type="image/png"/>
-
+	<link rel="icon" href="assets/image/favicon.png" type="image/png" />
 	<!-- google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 	<!-- icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	 <!-- Compiled and minified CSS -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<!-- local css -->
-  	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
 	<header>
 		<nav>
-		    <div class="nav-wrapper">
-		      <a href="#" class="brand-logo">Task<span class="navbar-logo">++</span></a>
-		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		      	<li class="family-photo"><img src="assets/image/brady_family.png" alt="Family photo"></li>
-		        <li class="family-tag"><a href="#">Brady Family</a></li>
-		        <li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li><!--modal is found at bottom just above script tag-->
-		        <li class="sign-out"><a href="#">Sign Out</a></li>
-		      </ul>
-		      <ul class="side-nav" id="mobile-demo">
-		        <li class="family-tag"><a href="#">Brady Family</a></li>
-		        <li class="manage-task"><a href="#">Manage Tasks</a></li>
-		        <li class="sign-out"><a href="#">Sign Out</a></li>
-		      </ul>
-		    </div>
-  		</nav>
-  	</header>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Task<span class="navbar-logo">++</span></a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li class="family-photo"><img src="assets/image/brady_family.png" alt="Family photo"></li>
+					<li class="family-tag"><a href="#">Brady Family</a></li>
+					<li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li>
+					<!--modal is found at bottom just above script tag-->
+					<li class="sign-out"><a href="#">Sign Out</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-demo">
+					<li class="family-tag"><a href="#">Brady Family</a></li>
+					<li class="manage-task"><a href="#">Manage Tasks</a></li>
+					<li class="sign-out"><a href="#">Sign Out</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-  	<section id="main">
-  		<div class="main-content container">
+	<section id="main">
+		<div class="main-content container">
 			<div class="row">
 				<!--Human Card  -->
 				<div class="col s12 m4 l4">
-	                <div class="card">
-	                    <div class="card-image waves-effect waves-block waves-light">
-	                        <img class="activator" src="assets/image/brady_marcia.png">
-	                    </div>
-	                    <div class="card-content">
-	                        <span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
-	                        <p><a href="#">Project link</a></p>
-	                    </div>
-	                    <div class="card-reveal">
-	                        <span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
-	                            <!-- Table -->
-								<table class="table">
-									<thead>
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/image/brady_marcia.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
+							<!-- <p><a href="#">Project link</a></p> -->
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
+							<!-- Table -->
+							<table class="table">
+								<thead>
 									<tr>
-										<th class="task"><span class="" table-head">Task:</span></th>
-										
-										<th><span class="due-by table-head">Due By:</span></th>
+										<th class="task"><span>Task:</span></th>
+										<th><span>Due By:</span></th>
 									</tr>
-									</thead>
+								</thead>
 
-									<tbody id="tbody">
-										<tr>
-											<td><i class="material-icons left">check_box_outline_blank</i>Wash Dishes</td>
-											<td class="test">7:59 PM</td>
-											
-										</tr>
-									</tbody>
+								<tbody id="tbody ">
+									<tr>
+										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
+										<td class="table-time">7:59 PM 08/05/2017</td>
+									</tr>
+								</tbody>
+							</table>
+	                    </div>
+	                </div>
+				</div> 
+				<!--Human Card  -->
+				<div class="col s12 m4 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/image/brady_bobby.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Bobby Brady<i class="material-icons right">add</i></span>
+							<!-- <p><a href="#">Project link</a></p> -->
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Bobby's Tasks: <i class="material-icons right">close</i></span>
+							<!-- Table -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="task"><span>Task:</span></th>
+										<th><span>Due By:</span></th>
+									</tr>
+								</thead>
 
-								</table>
+								<tbody id="tbody ">
+									<tr>
+										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
+										<td class="table-time">7:59 PM 08/05/2017</td>
+									</tr>
+								</tbody>
+							</table>
 	                    </div>
 	                </div>
-				</div> 
+				</div>
 				<!--Human Card  -->
 				<div class="col s12 m4 l4">
-	                <div class="card">
-	                    <div class="card-image waves-effect waves-block waves-light">
-	                        <img class="activator" src="assets/image/brady_bobby.png">
-	                    </div>
-	                    <div class="card-content">
-	                        <span class="card-title activator grey-text text-darken-4">Bobby Brady <i class="material-icons right">add</i></span>
-	                        <p><a href="#">Project link</a></p>
-	                    </div>
-	                    <div class="card-reveal">
-	                        <span class="card-title grey-text text-darken-4">Bobby's Tasks: <i class="material-icons right">close</i></span>
-							<div class="row">
-								<div class="col s6 m4 l4">
-									<p>Tasks:<p>
-								</div>
-								<div class="col s6 m4 l4">
-									<p>Complete By:</p>
-								</div>
-							</div>
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/image/brady_marcia.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
+							<!-- <p><a href="#">Project link</a></p> -->
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
+							<!-- Table -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="task"><span>Task:</span></th>
+										<th><span>Due By:</span></th>
+									</tr>
+								</thead>
+
+								<tbody id="tbody ">
+									<tr>
+										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
+										<td class="table-time">7:59 PM 08/05/2017</td>
+									</tr>
+								</tbody>
+							</table>
 	                    </div>
 	                </div>
-				</div> 
+				</div>
 				<!--Human Card  -->
 				<div class="col s12 m4 l4">
-	                <div class="card">
-	                    <div class="card-image waves-effect waves-block waves-light">
-	                        <img class="activator" src="assets/image/brady_jan.png">
-	                    </div>
-	                    <div class="card-content">
-	                        <span class="card-title activator grey-text text-darken-4">Jan Brady <i class="material-icons right">add</i></span>
-	                        <p><a href="#">Project link</a></p>
-	                    </div>
-	                    <div class="card-reveal">
-	                        <span class="card-title grey-text text-darken-4">Project Title <i class="material-icons right">close</i></span>
-	                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="assets/image/brady_marcia.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
+							<!-- <p><a href="#">Project link</a></p> -->
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
+							<!-- Table -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th class="task"><span>Task:</span></th>
+										<th><span>Due By:</span></th>
+									</tr>
+								</thead>
+
+								<tbody id="tbody ">
+									<tr>
+										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
+										<td class="table-time">7:59 PM 08/05/2017</td>
+									</tr>
+								</tbody>
+							</table>
 	                    </div>
 	                </div>
-				</div> 
-				<!--Human Card  -->
-				<div class="col s12 m4 l4">
-	                <div class="card">
-	                    <div class="card-image waves-effect waves-block waves-light">
-	                        <img class="activator" src="assets/image/project3.png">
-	                    </div>
-	                    <div class="card-content">
-	                        <span class="card-title activator grey-text text-darken-4">Project Title <i class="material-icons right">add</i></span>
-	                        <p><a href="#">Project link</a></p>
-	                    </div>
-	                    <div class="card-reveal">
-	                        <span class="card-title grey-text text-darken-4">Project Title <i class="material-icons right">close</i></span>
-	                        <p>Here is some more information about this project that is only revealed once clicked on.</p>
-	                    </div>
-	                </div>
-	            </div> 
+				</div>
+
+
+
+
+				
 
 
 
@@ -160,6 +202,7 @@
         <li class="tab col s3"><a href="#test2">Bobby</a></li>
         <li class="tab col s3"><a href="#test3">Dad</a></li>
         <li class="tab col s3"><a href="#test4">+Add New</a></li>
+
       </ul>
     </div>
     <!--first tab, person 1-->
@@ -186,8 +229,9 @@
      	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
     </div>
     <!--second tab-->
-       <div id="test2" class="col s12"> <!--table for person task info-->
-  <table>
+
+     <div id="test2" class="col s12"> <!--table for person task info-->
+      <table>
         <thead>
           <tr>
               <th>Description</th>
@@ -206,7 +250,7 @@
           </tr>
         </tbody>
       </table>
-     	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
+      <a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
     </div>
     <!--Third tab-->
         <div id="test3" class="col s12"> <!--table for person task info-->
@@ -268,11 +312,13 @@
 
 
 	<!-- jQuery -->
+
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 	<!-- Compiled and minified JavaScript -->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js "></script>
   	<!-- local app.js -->
-  	<script src="assets/javascript/app.js"></script>
+  	<script src="assets/javascript/app.js "></script>
 
 </body>
 </html>
