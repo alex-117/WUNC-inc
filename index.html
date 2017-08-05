@@ -23,7 +23,7 @@
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
 		      	<li class="family-photo"><img src="assets/image/brady_family.png" alt="Family photo"></li>
 		        <li class="family-tag"><a href="#">Brady Family</a></li>
-		        <li class="manage-task"><a href="#">Manage Tasks</a></li>
+		        <li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li><!--modal is found at bottom just above script tag-->
 		        <li class="sign-out"><a href="#">Sign Out</a></li>
 		      </ul>
 		      <ul class="side-nav" id="mobile-demo">
@@ -139,6 +139,68 @@
 
 
 
+
+
+
+
+
+
+
+
+
+<!-- Modal Trigger for when MANAGE TASKS is clicked -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <!--div for tabs in parent modal-->
+      <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Jan</a></li>
+        <li class="tab col s3"><a href="#test2">Bobby</a></li>
+        <li class="tab col s3"><a href="#test3">Dad</a></li>
+        <li class="tab col s3"><a href="#test4">blank</a></li>
+      </ul>
+    </div>
+    <!--first tab, person 1-->
+    <div id="test1" class="col s12"> <!--table for person 1 task info-->
+  <table>
+        <thead>
+          <tr>
+              <th>Description</th>
+              <th>Points</th>
+              <th>Status</th>
+              <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Laundry</td>
+            <td>5</td>
+            <td>Not Complete</td>
+            <td>trash can/edit pencil</td>
+          </tr>
+        </tbody>
+      </table>
+     
+    </div></div>
+    <!--second tab-->
+    <div id="test2" class="col s12">Test 2</div>
+    <!--Third tab-->
+    <div id="test3" class="col s12">Test 3</div>
+    <!--Fourth tag-->
+    <div id="test4" class="col s12">Test 4</div>
+  </div>
+ 	
+	<a class="waves-effect waves-light btn"><i class="material-icons left">add</i>Add Task</a>
+
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
 
 
 	<!-- jQuery -->
