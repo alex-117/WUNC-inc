@@ -26,11 +26,12 @@ $( document ).ready(function(){
 })
 
 
-//dropdown btns
+//task form - dropdown btns
 $(document).ready(function() {
 	$('select').material_select();
 });
 
+//task form - time picker
 $('.timepicker').pickatime({
 	default: 'now', // Set default time: 'now', '1:30AM', '16:30'
 	fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
@@ -42,6 +43,33 @@ $('.timepicker').pickatime({
 	ampmclickable: true, // make AM PM clickable
 	aftershow: function(){} //Function for after opening timepicker
 });
+
+
+//task form - date picker
+$('.datepicker').pickadate({
+	selectMonths: true, // Creates a dropdown to control month
+	selectYears: 15, // Creates a dropdown of 15 years to control year,
+	today: 'Today',
+	clear: 'Clear',
+	close: 'Ok',
+	closeOnSelect: false // Close upon selecting a date,
+});
+
+
+// $(document).ready(function() {
+// 	$('#wrapper').hide();
+// });
+
+//show add task forms on button click...still not working
+$('.modal-trigger').on('click', function() {
+	$('#add-task-wrapper').hide();
+})
+
+
+//show add task forms on button click.....still not working
+$('#addTask').on('click', function() {
+	$('#add-task-wrapper').show();
+})
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div
@@ -80,85 +108,90 @@ $('.timepicker').pickatime({
 
 
 
-// // Initialize Firebase. using jweber's account
-// var config = {
-// 	apiKey: "AIzaSyAK-qjUvGITwuDH2saZ_RItobLK_VLWuBY",
-// 	authDomain: "task-app-300e2.firebaseapp.com",
-// 	databaseURL: "https://task-app-300e2.firebaseio.com",
-// 	projectId: "task-app-300e2",
-// 	storageBucket: "task-app-300e2.appspot.com",
-// 	messagingSenderId: "612765168866"
-// };
+// Initialize Firebase. using jweber's account
+var config = {
+	apiKey: "AIzaSyAK-qjUvGITwuDH2saZ_RItobLK_VLWuBY",
+	authDomain: "task-app-300e2.firebaseapp.com",
+	databaseURL: "https://task-app-300e2.firebaseio.com",
+	projectId: "task-app-300e2",
+	storageBucket: "task-app-300e2.appspot.com",
+	messagingSenderId: "612765168866"
+};
 
-// firebase.initializeApp(config);
+firebase.initializeApp(config);
 
-// var database = firebase.database();
-
-
-// //----------------Adding tasks to the task list
+var database = firebase.database();
 
 
-// //when the modal is open and user selects add task
-// $('#addTask').on('click', function(){
-// 	//task inout panel is now .show()
-// 	$('#taskPanel').show();
-// });
+//----------------Adding tasks to the task list
 
 
-// //User has entered in text for a new task and clicks apply. changes are registerest and pushed to firebase and back to html page
-// $('#applyTask').on("click", function (event) {
-// 	event.preventDefault(); 
+//when the modal is open and user selects add task
+$('#addTask').on('click', function(){
+	//task input panel is now .show()
+	$('#taskPanel').show();
+});
 
-// 	// Grabs user input
-// 	var taskName = $("...").val().trim();
-// 	var taskReward = $("...").val().trim();
-// 	var taskDueBy = $("...").val().trim();
+
+//User has entered in text for a new task and clicks apply. changes are registerest and pushed to firebase and back to html page
+$('#applyTask').on("click", function (event) {
+	event.preventDefault(); 
+
+	// Grabs user input
+	var taskName = $("#userTaskDescription").val().trim();
+	var taskReward = $("#userTaskReward").val().trim();
+	var taskTimeDueBy = $("#userTaskTimeDueBy").val().trim();
+	var taskDateDueBy = $("#userTaskDateDueBy").val().trim();
+
 		
-// 	// Create object to hold task data this links to firebase as the data in firebase is in object format
-// 	var newTask = {
-// 		name: taskName,
-// 		reward: taskReward,
-// 		dueBy: taskDueBy,
-// 	};
+	// Create object to hold task data this links to firebase as the data in firebase is in object format
+	var newTask = {
+		name: taskName,
+		reward: taskReward,
+		timeDueBy: taskTimeDueBy,
+		dateDueBy: taskDateDueBy
+	};
 
-// 	// Uploads task data to the database. pushes task data into the object above
-// 	database.ref().push(newTask);
+	// Uploads task data to the database. pushes task data into the object above
+	database.ref().push(newTask);
 
-// 	// test to make sure it works
-// 	console.log("Task Name: " + newTask.name);
-// 	console.log("Task Reward: " + newTask.reward);
-// 	console.log("Task Due By: " + newTask.dueBy);
+	// test to make sure it works
+	console.log("Task Name: " + newTask.name);
+	console.log("Task Reward: " + newTask.reward);
+	console.log("Task Due By: " + newTask.timeDueBy);
+	console.log("Task date: " + newTask.dateDueBy)
 
-// 	// Clears all of the input boxes
-// 	$("...").val("");
-// 	$("...").val("");
-// 	$("...").val("");
-// });
+	// Clears all of the input boxes
+	$("#userTaskDescription").val("");
+	$("#userTaskReward").val("");
+	$("#userTaskTimeDueBy").val("");
+	$("#userTaskDateDueBy").val("");
+});
 
 
 
-// //-------Create Firebase event for adding tasks to the database and a row in the html when a user adds an entry
+//-------Create Firebase event for adding tasks to the database and a row in the html when a user adds an entry
 
-// 	database.ref().on("child_added", function (snapshot) {
+	database.ref().on("child_added", function (snapshot) {
 
-// 	console.log(snapshot.val());
+	console.log(snapshot.val());
 
-// 	// Store user task input data into a variable. This is for firebase.
-// 	var taskName = snapshot.val().name;
-// 	var taskReward = snapshot.val().reward;
-// 	var taskDueBy = snapshot.val().dueBy;
+	// Store user task input data into a variable. This is for firebase.
+	var taskName = snapshot.val().name;
+	var taskReward = snapshot.val().reward;
+	var taskDueBy = snapshot.val().dueBy;
 
-// 	// test to make sure it works
-// 	console.log(taskName);
-// 	console.log(taskReward);
-// 	console.log(taskDueBy);
+	// test to make sure it works
+	console.log(taskName);
+	console.log(taskReward);
+	console.log(taskDueBy);
 
-// 	//append data to parent page
-// 	$('...').append("<tr><td>" + taskName + "</td><td>" + taskReward + "</td><td>" +
-// 	taskDueBy + (edit icon) + (trach icon) + "</td></tr>");
+	//append data to child page
+	$('#child-tbody > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
+	taskDueBy  + "</td></tr>");
 
-// 	//append data to child page
-// 	$('...').append("<tr><td>" + (check box icon) + taskName + "</td><td>" + "</td><td>" +
-// 	taskDueBy + (more info icon) +"</td></tr>");
-// });
+	//append data to parent page
+	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + taskReward + "</td><td>" +
+	taskDueBy +"</td></tr>");
+});
 
