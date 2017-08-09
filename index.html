@@ -23,11 +23,22 @@
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li class="family-photo"><img src="assets/image/brady_family.png" alt="Family photo"></li>
-					<li class="family-tag"><a href="#">Brady Family</a></li>
-					<li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li>
-					<!--modal is found at bottom just above script tag-->
-					<li class="sign-out"><a href="#">Sign Out</a></li>
+					<li class="family-tag"><a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a></li>
+<!-- 					<li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li>
+					<li class="sign-out"><a href="#">Sign Out</a></li> -->
 				</ul>
+
+						  <!-- Dropdown Trigger -->
+						  
+
+						  <!-- Dropdown Structure -->
+						  <ul id='dropdown1' class='dropdown-content'>
+						    <li><a class="modal-trigger" href="#modal1">Manage Tasks</a></li>
+						    <li class="divider"></li>
+						    <li><a href="#">Sign Out</a></li>
+						  </ul>
+
+
 				<ul class="side-nav" id="mobile-demo">
 					<li class="family-tag"><a href="#">Brady Family</a></li>
 					<li class="manage-task"><a href="#">Manage Tasks</a></li>
@@ -112,10 +123,10 @@
 				<div class="col s12 m6 l4">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="assets/image/brady_marcia.png">
+							<img class="activator" src="assets/image/brady_jan.png">
 						</div>
 						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
+							<span class="card-title activator grey-text text-darken-4">Jan Brady<i class="material-icons right">add</i></span>
 							<!-- <p><a href="#">Project link</a></p> -->
 						</div>
 						<div class="card-reveal">
@@ -140,19 +151,20 @@
 	                </div>
 				</div>
 				<!--Human Card  -->
-				<div class="col s12 m6 l4">
+<!-- 				<div class="col s12 m6 l4">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
 							<img class="activator" src="assets/image/brady_marcia.png">
 						</div>
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
-							<!-- <p><a href="#">Project link</a></p> -->
 						</div>
 						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
+							<span class="card-title grey-text text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span> -->
+
 							<!-- Table -->
-							<table class="table">
+
+<!-- 							<table class="table">
 								<thead>
 									<tr>
 										<th class="task"><span>Task:</span></th>
@@ -169,7 +181,7 @@
 							</table>
 	                    </div>
 	                </div>
-				</div>
+				</div> -->
             </div>
   		</div>
   	</section>
