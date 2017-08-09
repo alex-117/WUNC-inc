@@ -187,11 +187,28 @@ $('#applyTask').on("click", function (event) {
 	console.log(taskDueBy);
 
 	//append data to child page
-	$('#child-tbody > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
+	$('#child-tbody > tbody').append("<tr><td><i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>" + taskName + "</td><td>" +
 	taskDueBy  + "</td></tr>");
 
 	//append data to parent page
-	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + taskReward + "</td><td>" +
+	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>" + taskName + "</td><td>" + taskReward + "</td><td>" +
 	taskDueBy +"</td></tr>");
+
 });
+
+//------ click check boxes
+$('body').on('click', '#checkbox', function() {
+	var state = $(this).attr('checkState');
+	if (state === 'un-checked') {
+		$(this).replaceWith("<i class='material-icons left' checkState='checked' id='checkbox'>check_box</i>");
+	} else {
+		$(this).replaceWith("<i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>")
+	}
+});
+
+
+
+
+
+
 
