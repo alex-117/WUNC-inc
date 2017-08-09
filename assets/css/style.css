@@ -114,7 +114,6 @@ nav .brand-logo {
     overflow: hidden;
     -webkit-transition: color .28s ease;
     transition: color .28s ease;
-    font-weight: light;
 }
 
 .tabs .indicator {
@@ -133,7 +132,7 @@ nav .brand-logo {
     background-color: #99cc33;
 }
 
-.modal-footer {
+.modal .modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: white;
     padding: 4px 6px;
