@@ -81,7 +81,8 @@ nav .brand-logo {
 
 .modal {
 	background-color: white;
-	height: 50%;
+	height: 100%;
+	width: 1140px;
 }
 
 .tabs .tab a:hover {
@@ -101,6 +102,7 @@ nav .brand-logo {
 	border: 1px solid #DCDCDC;
 	padding: 50px;
 	height: 490px;
+	display: none;
 }
 
 .tabs .tab a {
@@ -139,6 +141,15 @@ nav .brand-logo {
     height: 56px;
     width: 100%;
     text-align: right;
+}
+
+/*TIME PICKER*/
+.picker__holder {
+	/*height: 800px;*/
+}
+
+.picker__frame {
+	margin-top: 10%;
 }
 
 /* .due-by {

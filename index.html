@@ -193,7 +193,8 @@
 
     	<!--first tab, person 1-->
    		<div id="test1" class="col s12"> <!--table for person  task info-->
-		    <table id="parent-task-table">
+   			<div class="add-task-table"></div>
+		    <table class="parent-task-table">
 		        <thead>
 		          <tr>
 		              <th>Description</th>
@@ -213,9 +214,141 @@
 		        </tbody>
 		    </table>
      		<hr>
-     		<a id="addTask" class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
+     		<a class="waves-effect waves-light btn add-task addTaskBtn"><i class="material-icons left">add</i>Add Task</a>
 
-	        <div class="add-task-wrapper">
+	        <!-- <div class="add-task-wrapper">
+				<div class="row">
+				    <div class="input-field col s12">
+					    <select multiple placeholder="name">
+				   	      <option value="" disabled selected>Select Child</option>
+					      <option value="1">Jan</option>
+					      <option value="2">Bobby</option>
+					      <option value="3">Marcia</option>
+					    </select>
+					</div>
+			  	</div>
+
+			    <div class="row">
+			      <div class="input-field col s12">
+			        <input id="userTaskDescription" type="text" >
+			        <label for="input_text">Task Description</label>
+			      </div>
+			    </div>
+
+			    <div class="row">
+			      <div class="input-field col s12">
+			        <input id="userTaskReward" type="text" >
+			        <label for="input_text">Point Value</label>
+			      </div>
+			    </div>
+
+			     <div class="row">
+			      <div class="input-field col s12">
+				    <input id="userTaskTimeDueBy" type="text" placeholder="Due By:" class="timepicker">
+			      </div>
+			    </div>
+
+			     <div class="row">
+			      <div class="input-field col s12">
+					  <input id="userTaskDateDueBy" type="text" class="datepicker">
+			      </div>
+			    </div>
+
+			    <button id="applyTask">Apply</button>
+
+	        </div> -->
+
+	    </div>
+
+
+	    <!--second tab-->
+
+	    <div id="test2" class="col s12"> <!--table for person task info-->
+	    	<div class="add-task-table"></div>
+		    <table class="parent-task-table">
+		        <thead>
+		          <tr>
+		              <th>Description</th>
+		              <th>Points</th>
+		              <th>Status</th>
+		              <th>Edit</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr>
+		            <td>Laundry</td>
+		            <td>5</td>
+		            <td>Not Complete</td>
+		            <td>trash can/edit pencil</td>
+		          </tr>
+		        </tbody>
+		    </table>
+		    
+		    <a class="waves-effect waves-light btn add-task addTaskBtn"><i class="material-icons left">add</i>Add Task</a>
+
+	    </div>
+
+
+	    <!--Third tab-->
+	    <div id="test3" class="col s12"> <!--table for person task info-->
+	    	<div class="add-task-table"></div>
+		    <table class="parent-task-table">
+		        <thead>
+		          <tr>
+		              <th>Description</th>
+		              <th>Points</th>
+		              <th>Status</th>
+		              <th>Edit</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr>
+		            <td>Laundry</td>
+		            <td>5</td>
+		            <td>Not Complete</td>
+		            <td>trash can/edit pencil</td>
+		          </tr>
+		        </tbody>
+		    </table>
+	    	<a class="waves-effect waves-light btn add-task addTaskBtn"><i class="material-icons left">add</i>Add Task</a>
+	    </div>
+
+
+	    <!--Fourth tag-->
+	    <div id="test4" class="col s12">
+			<div class="row">
+			    <form class="col s12">
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input placeholder="New User Name" id="first_name" type="text" class="validate">
+			          <label for="first_name"></label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s6">
+			              		<div class="file-field input-field">
+			      			<div class="btn"><span>Add Image</span>
+			        			<input type="file">
+			      			</div>
+			      		<div class="file-path-wrapper">
+			        		<input class="file-path validate" type="text">
+			      		</div>
+			    		</div>
+			        </div>
+			      </div>
+			      <a class="waves-effect waves-light btn submit">Submit</a>
+			  	</form>
+  			</div>
+	    </div>
+
+
+	    <!-- add task wrapper -->
+	    <!-- add task wrapper -->
+	    <!-- add task wrapper -->
+
+		<div class="add-task-wrapper">
 				<div class="row">
 				    <div class="input-field col s12">
 					    <select multiple placeholder="name">
@@ -257,88 +390,11 @@
 
 	        </div>
 
-	    </div>
 
 
-	    <!--second tab-->
-
-	    <div id="test2" class="col s12"> <!--table for person task info-->
-		    <table>
-		        <thead>
-		          <tr>
-		              <th>Description</th>
-		              <th>Points</th>
-		              <th>Status</th>
-		              <th>Edit</th>
-		          </tr>
-		        </thead>
-
-		        <tbody>
-		          <tr>
-		            <td>Laundry</td>
-		            <td>5</td>
-		            <td>Not Complete</td>
-		            <td>trash can/edit pencil</td>
-		          </tr>
-		        </tbody>
-		    </table>
-		    
-		    <a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
-
-	    </div>
 
 
-	    <!--Third tab-->
-	    <div id="test3" class="col s12"> <!--table for person task info-->
-		    <table>
-		        <thead>
-		          <tr>
-		              <th>Description</th>
-		              <th>Points</th>
-		              <th>Status</th>
-		              <th>Edit</th>
-		          </tr>
-		        </thead>
 
-		        <tbody>
-		          <tr>
-		            <td>Laundry</td>
-		            <td>5</td>
-		            <td>Not Complete</td>
-		            <td>trash can/edit pencil</td>
-		          </tr>
-		        </tbody>
-		    </table>
-	    	<a class="waves-effect waves-light btn add-task"><i class="material-icons left">add</i>Add Task</a>
-	    </div>
-
-
-	    <!--Fourth tag-->
-	    <div id="test4" class="col s12">
-			<div class="row">
-			    <form class="col s12">
-			      <div class="row">
-			        <div class="input-field col s6">
-			          <input placeholder="New User Name" id="first_name" type="text" class="validate">
-			          <label for="first_name"></label>
-			        </div>
-			      </div>
-			      <div class="row">
-			        <div class="input-field col s6">
-			              		<div class="file-field input-field">
-			      			<div class="btn"><span>Add Image</span>
-			        			<input type="file">
-			      			</div>
-			      		<div class="file-path-wrapper">
-			        		<input class="file-path validate" type="text">
-			      		</div>
-			    		</div>
-			        </div>
-			      </div>
-			      <a class="waves-effect waves-light btn submit">Submit</a>
-			  	</form>
-  			</div>
-	    </div>
 	     
 
 	  	
@@ -368,3 +424,10 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
