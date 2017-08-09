@@ -65,7 +65,7 @@
 
 							<span class="card-title text-darken-4">Marcia's Tasks: <i class="material-icons right">close</i></span>
 							<!-- Table -->
-							<table id="child-table" class="table">
+							<table id="marcia" class="table">
 								<thead>
 									<tr>
 										<th class="task"><span>Task:</span></th>
@@ -74,14 +74,7 @@
 								</thead>
 
 								<tbody>
-									<tr>
-										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
-										<td class="table-time">7:59 PM 08/05/2017</td>
-									</tr>
-									<tr>
-										<td><i class="material-icons left ">check_box</i>Wash Dishes</td>
-										<td class="table-time">7:59 PM 08/05/2017</td>
-									</tr>
+									
 								</tbody>
 							</table>
 	                    </div>
@@ -98,9 +91,10 @@
 							<!-- <p><a href="#">Project link</a></p> -->
 						</div>
 						<div class="card-reveal">
+
 							<span class="card-title grey-text text-darken-4">Bobby's Tasks: <i class="material-icons right">close</i></span>
 							<!-- Table -->
-							<table class="table">
+							<table class="table" id="bobby">
 								<thead>
 									<tr>
 										<th class="task"><span>Task:</span></th>
@@ -108,11 +102,9 @@
 									</tr>
 								</thead>
 
-								<tbody id="tbody ">
-									<tr>
-										<td><i class="material-icons left ">check_box_outline_blank</i>Wash Dishes</td>
-										<td class="table-time">7:59 PM 08/05/2017</td>
-									</tr>
+								<tbody id="tbody">
+									<!--tasks added through firebase-->
+									
 								</tbody>
 							</table>
 	                    </div>
@@ -230,11 +222,11 @@
 	        <div class="add-task-wrapper">
 				<div class="row">
 				    <div class="input-field col s12">
-					    <select multiple placeholder="name">
-				   	      <option value="" disabled selected>Select Child</option>
-					      <option value="1">Jan</option>
-					      <option value="2">Bobby</option>
-					      <option value="3">Marcia</option>
+					    <select multiple placeholder="name" name="userName">
+				   	      <option value="0" disabled selected>Select Child</option>
+					      <option value="marcia">Marcia</option>
+					      <option value="bobby">Bobby</option>
+					      <option value="jan">Jan</option>
 					    </select>
 					</div>
 			  	</div>

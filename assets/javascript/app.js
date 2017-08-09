@@ -14,7 +14,7 @@
 				
 
 
-	//profile child 
+	
 
 
 
@@ -108,19 +108,18 @@ $('#addTask').on('click', function() {
 
 
 
-// Initialize Firebase. using jweber's account
-var config = {
-	apiKey: "AIzaSyAK-qjUvGITwuDH2saZ_RItobLK_VLWuBY",
-	authDomain: "task-app-300e2.firebaseapp.com",
-	databaseURL: "https://task-app-300e2.firebaseio.com",
-	projectId: "task-app-300e2",
-	storageBucket: "task-app-300e2.appspot.com",
-	messagingSenderId: "612765168866"
-};
+// Initialize Firebase. using wunc.inc's gmail account
+  var config = {
+    apiKey: "AIzaSyC_Mml0KH_ufwPGoCj9idwXceIQqnmTihQ",
+    authDomain: "task-d136a.firebaseapp.com",
+    databaseURL: "https://task-d136a.firebaseio.com",
+    projectId: "task-d136a",
+    storageBucket: "task-d136a.appspot.com",
+    messagingSenderId: "720922787934"
+  };
+  firebase.initializeApp(config);
 
-firebase.initializeApp(config);
-
-var database = firebase.database();
+  var database = firebase.database();
 
 
 //----------------Adding tasks to the task list
@@ -138,14 +137,22 @@ $('#applyTask').on("click", function (event) {
 	event.preventDefault(); 
 
 	// Grabs user input
+	var userNames = [];
 	var taskName = $("#userTaskDescription").val().trim();
 	var taskReward = $("#userTaskReward").val().trim();
 	var taskTimeDueBy = $("#userTaskTimeDueBy").val().trim();
 	var taskDateDueBy = $("#userTaskDateDueBy").val().trim();
+	for (var i = 0; i < $('select[name="userName"]').val().length; i++) {
+		userNames.push($('select[name="userName"]').val()[i].trim())
+	}
+	//var userName = $('select[name="userName"]').val()[0].trim();
+	//console.log($('select[name="userName"]').val())
 
-		
+		console.log(userNames);
 	// Create object to hold task data this links to firebase as the data in firebase is in object format
-	var newTask = {
+	for (var i = 0; i < userNames.length; i++) {
+		var newTask = {
+		user: userNames[i],
 		name: taskName,
 		reward: taskReward,
 		timeDueBy: taskTimeDueBy,
@@ -155,13 +162,19 @@ $('#applyTask').on("click", function (event) {
 	// Uploads task data to the database. pushes task data into the object above
 	database.ref().push(newTask);
 
+	  $('#' + userNames[i] +' > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + newTask.dateDueBy  + " @ " + newTask.timeDueBy +  "</td></tr>");
+	}
+	
+
 	// test to make sure it works
+	console.log("User Name: " + newTask.user);
 	console.log("Task Name: " + newTask.name);
 	console.log("Task Reward: " + newTask.reward);
 	console.log("Task Due By: " + newTask.timeDueBy);
 	console.log("Task date: " + newTask.dateDueBy)
 
 	// Clears all of the input boxes
+	$('select[name="userName"]').val("");
 	$("#userTaskDescription").val("");
 	$("#userTaskReward").val("");
 	$("#userTaskTimeDueBy").val("");
@@ -179,22 +192,34 @@ $('#applyTask').on("click", function (event) {
 	// Store user task input data into a variable. This is for firebase.
 	var taskName = snapshot.val().name;
 	var taskReward = snapshot.val().reward;
-	var taskDueBy = snapshot.val().dueBy;
+	var taskDueBy = snapshot.val().timeDueBy;
+	var dateDueBy = snapshot.val().dateDueBy;
 
 	// test to make sure it works
 	console.log(taskName);
 	console.log(taskReward);
 	console.log(taskDueBy);
 
+
+
+	
+
 	//append data to child page
-	$('#child-tbody > tbody').append("<tr><td><i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>" + taskName + "</td><td>" +
-	taskDueBy  + "</td></tr>");
+// $('select[name="userName"]').change(function() {
+//     if ($(this).val() == "1") {
+//         $('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
+//     } else if ($(this).val() == "2") {
+//         $('#bobby > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
+// 	dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
+//     }
+//});
 
+	//$('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
+	//dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
 	//append data to parent page
-	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>" + taskName + "</td><td>" + taskReward + "</td><td>" +
-	taskDueBy +"</td></tr>");
 
-});
+	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
+	dateDueBy + " @ " + taskDueBy + "</td><td>");
 
 //------ click check boxes
 $('body').on('click', '#checkbox', function() {
@@ -204,6 +229,7 @@ $('body').on('click', '#checkbox', function() {
 	} else {
 		$(this).replaceWith("<i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>")
 	}
+
 });
 
 
