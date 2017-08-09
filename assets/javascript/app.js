@@ -201,6 +201,7 @@ $('#applyTask').on("click", function (event) {
 	console.log(taskDueBy);
 
 
+
 	
 
 	//append data to child page
@@ -216,9 +217,24 @@ $('#applyTask').on("click", function (event) {
 	//$('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
 	//dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
 	//append data to parent page
+
 	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
 	dateDueBy + " @ " + taskDueBy + "</td><td>");
 
+//------ click check boxes
+$('body').on('click', '#checkbox', function() {
+	var state = $(this).attr('checkState');
+	if (state === 'un-checked') {
+		$(this).replaceWith("<i class='material-icons left' checkState='checked' id='checkbox'>check_box</i>");
+	} else {
+		$(this).replaceWith("<i class='material-icons left' checkState='un-checked' id='checkbox'>check_box_outline_blank</i>")
+	}
 
 });
+
+
+
+
+
+
 
