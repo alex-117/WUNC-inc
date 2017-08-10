@@ -67,20 +67,39 @@ $('.modal-trigger').on('click', function() {
 
 var addTask;
 //show add task forms on button click.....still not working
+// $('.addTaskBtn').on('click', function() {
+// 	console.log("clicked");
+// 	var taskWrapper = $(".add-task-wrapper").html();
+// 	if(!addTask) {
+// 		$('.parent-task-table').hide();
+// 		$('.add-task-table').append(taskWrapper);
+// 		$(taskWrapper).show();
+// 		addTask = true;
+// 	} else if(addTask) {
+// 		$('.parent-task-table').show();
+// 		$('.add-task-table').empty();
+// 		addTask = false;
+// 	}
+// });
+
+
 $('.addTaskBtn').on('click', function() {
 	console.log("clicked");
-	var taskWrapper = $(".add-task-wrapper").html();
 	if(!addTask) {
-		$('.parent-task-table').hide();
-		$('.add-task-table').append(taskWrapper);
-		$(taskWrapper).show();
+		$('.test').hide();
+		$('.add-task-wrapper').show();
 		addTask = true;
 	} else if(addTask) {
-		$('.parent-task-table').show();
-		$('.add-task-table').empty();
+		$('.test').show();
+		$('.add-task-wrapper').hide();
 		addTask = false;
 	}
 });
+
+
+
+
+
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div

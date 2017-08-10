@@ -134,6 +134,19 @@ nav .brand-logo {
     background-color: #99cc33;
 }
 
+#add-task-close {
+	position: fixed;
+	top: 5px;
+	left: 93%;
+	padding: 0;
+	width: 50px;
+}
+
+#add-task-close .material-icons {
+	width: 100%;
+
+}
+
 .modal .modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: white;
@@ -143,14 +156,6 @@ nav .brand-logo {
     text-align: right;
 }
 
-/*TIME PICKER*/
-.picker__holder {
-	/*height: 800px;*/
-}
-
-.picker__frame {
-	margin-top: 10%;
-}
 
 /* .due-by {
 	position: absolute;
