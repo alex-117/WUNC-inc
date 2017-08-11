@@ -75,6 +75,10 @@ nav .brand-logo {
 	color: black;
 }
 
+.card {
+    
+}
+
 
 /*----------modal----------*/
 
@@ -182,7 +186,6 @@ nav .brand-logo {
     line-height: 22px;
     padding: 14px 16px;
 }
-
 
 /* .due-by {
 	position: absolute;
