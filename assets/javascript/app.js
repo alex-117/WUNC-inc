@@ -283,7 +283,40 @@ $(".good-job-gif").on("click", function(event) {
 
 
 
+// *****Sign-Up Javascript - Thongvun's Don't touch
+// Firebase event
+    database.ref().on('child_added', function(childSnapshot){
 
+    var theChild = childSnapshot.val();
+    var displayFirstName = childSnapshot.val().dbFirstName;
+    var displayLastName = childSnapshot.val().dbLastName;
+    var displayEmail = childSnapshot.val().dbEmail;
+    var displayPassword = childSnapshot.val().dbPassword;
+
+});//End database.ref.on
+
+//Sign-Up Button
+$("#user-LogIn").on("click", function() {
+    event.preventDefault();
+
+    var signFirstName = $('#first-name').val().trim();
+    var signLastName = $('#last-name').val().trim();
+	var signEmail = $('#txt-email').val().trim();
+	// var signLastName = $('#IMG').val().trim(); UPDATE LATER FOR SAVED IMG?
+    var signPassword = $('#txt-password').val().trim();
+
+    //Clears previous values
+    $(this).closest('form').find("input[type=text], textarea").val("");
+
+    // Database push
+    database.ref().push({
+        dbFirstName: signFirstName,
+        dbLastName: signLastName,
+        dbEmail: signEmail,
+        dbPassword: signPassword
+    });
+
+});//End sign-up button listener
 
 
 
