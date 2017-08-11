@@ -5,32 +5,38 @@
 html,
 body {
 	font-family: 'Nunito Sans', sans-serif;
-	background-color: #28353D;
+    background-color: #85A5CC;
+    color: #D0E4F2;
+}
+
+input {
+    color: #1A1F2B;
 }
 
 /*Header*/
-nav {
-	background-color: #28353D;
+nav, .page-footer {
+	 background-color: #85A5CC; 
 }
 
 nav .brand-logo {
-    /* position: absolute;
-    color: #fff;
-    display: inline-block;
-    font-size: 2.1rem;
-    padding: 0; */
     margin-left: 20px;
 }
 
-/*Task ++ green color */
+
+/*Task ++ color */
 
 .navbar-logo {
-	color: #99cc33;
+	color: #1A1F2B;
+}
+
+.btn-large {
+    background-color: #1A1F2B;
 }
 
 .family-tag a {
 	font-weight: 200;
-	font-size: 18px;
+    font-size: 18px;
+    display: inline;
 }
 
 .family-photo {
@@ -43,23 +49,21 @@ nav .brand-logo {
 	width: 100%;
 }
 /*mobile collapse*/
-
 .side-nav {
 	text-align: center;
 }
 
 
 /*Section: Main*/
-.main-content {
+/* .main-content {
 	width: 100%;
 	text-align: center;
-}
+} */
 
- .row {
-	float: left;
+ /* .row {
 	width: 100%;
 	margin: 0 auto;
-} 
+}  */
 
 .table-head {
 	/* position: absolute; */
@@ -135,7 +139,7 @@ nav .brand-logo {
     margin: 25px auto!important;
     position: relative;
     display: block;
-    background-color: #99cc33;
+    background-color: #1A1F2B;
 }
 
 #add-task-close {
@@ -197,6 +201,121 @@ nav .brand-logo {
 	 left: 60px; 
 } */
 
+
+
+/*"HomePage  */
+.cont-bg-image {
+    background-image: url("../image/background1.jpg");
+    background-size: cover;
+    /* opacity: 0.5; */
+}
+
+container .cont-bg-image {
+    width: 100%;
+    margin: 0 auto;
+    
+}  
+
+.pad-row {
+    width: 85%;
+}
+
+/*Social media icons  */
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/*Instagram  */
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Youtube */
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.horz{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     overflow: hidden; 
+    /* background-color: #333333; */
+}
+
+li {
+     float: left;
+     margin-right: 5px; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    /* padding: 16px; */
+    text-decoration: none;
+}
+
+  /* label color */
+   .input-field label {
+     color: #1A1F2B;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #1A1F2B;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #1A1F2B;
+     box-shadow: 0 1px 0 0 #1A1F2B;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #1A1F2B;
+     box-shadow: 0 1px 0 0 #1A1F2B;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #1A1F2B;
+     box-shadow: 0 1px 0 0 #1A1F2B;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1A1F2B;
+   }
+
+   .btn-large:hover {
+    background-color: #85A5CC; /* Green */
+    color: white;
+}
+
+
 /**********************************************/
 /******************GIPHY API*******************/
 /**********************************************/
@@ -226,6 +345,7 @@ nav .brand-logo {
 /**********************************************/
 /**************END: Mobile CSS*****************/
 /**********************************************/
+
 
 
 
