@@ -66,22 +66,6 @@ $('.modal-trigger').on('click', function() {
 })
 
 var addTask;
-//show add task forms on button click.....still not working
-// $('.addTaskBtn').on('click', function() {
-// 	console.log("clicked");
-// 	var taskWrapper = $(".add-task-wrapper").html();
-// 	if(!addTask) {
-// 		$('.parent-task-table').hide();
-// 		$('.add-task-table').append(taskWrapper);
-// 		$(taskWrapper).show();
-// 		addTask = true;
-// 	} else if(addTask) {
-// 		$('.parent-task-table').show();
-// 		$('.add-task-table').empty();
-// 		addTask = false;
-// 	}
-// });
-
 
 $('.addTaskBtn').on('click', function() {
 	console.log("clicked");
@@ -202,7 +186,7 @@ $('#applyTask').on("click", function (event) {
 
 //-------Create Firebase event for adding tasks to the database and a row in the html when a user adds an entry
 
-	database.ref().on("child_added", function (snapshot) {
+database.ref().on("child_added", function (snapshot) {
 
 	console.log(snapshot.val());
 
@@ -224,4 +208,68 @@ $('#applyTask').on("click", function (event) {
 	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons left'>check_box_outline_blank</i>" + taskName + "</td><td>" + taskReward + "</td><td>" +
 	taskDueBy +"</td></tr>");
 });
+
+
+
+/**********************************************/
+/*************child-modal.html*****************/
+/**********************************************/
+function displayGif() {
+	var queryURL = "https://api.giphy.com/v1/gifs/q5J2HfnH8mCvS?api_key=dc6zaTOxFJmzC";
+
+
+	$.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+
+    	var gifData = response.data;
+    	var gifDiv = $("<div class='gifDiv'>");
+    	var pImg = $("<img class='gif'>");
+    	pImg.attr("src", gifData.images.downsized_medium.url);
+
+    	gifDiv.append(pImg);
+    	console.log(gifData);
+
+    	$("#marcia").append(gifDiv);
+
+    	setTimeout(function() {gifDiv.remove()}, 3000);
+
+    });
+}
+
+$(".good-job-gif").on("click", function(event) {
+
+	if($(this).text() === "check_box_outline_blank") {
+		$(this).text("check_box")
+		displayGif();
+	} else {
+		$(this).text("check_box_outline_blank");
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
