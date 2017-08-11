@@ -19,14 +19,17 @@
 
 	<header>
 		<nav>
-			<div class="nav-wrapper">
-				<a href="splash.html" class="brand-logo">Task<span class="navbar-logo">++</span></a>
+			<div class="nav-wrapper navbg">
+				<a href="index.html" class="brand-logo">Task<span class="navbar-logo">++</span></a>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li class="family-photo"><img src="assets/image/brady_family.png" alt="Family photo"></li>
-					<li class="family-tag"><a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a></li>
-<!-- 					<li class="manage-task"><a class="modal-trigger" href="#modal1">Manage Tasks</a></li>
-					<li class="sign-out"><a href="#">Sign Out</a></li> -->
+
+					<li class="family-tag" id="jLastName">
+						  <a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a>  
+					</li>
+
+					<!-- <li class="family-tag" id="jLastName"><a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a></li> -->
 				</ul>
 
 						  <!-- Dropdown Trigger -->
@@ -57,7 +60,7 @@
 				<h3 class="navbar-logo">Welcome back, $<<name>>!</h3>
 			</div>
 
-			<div class="row pad-row">
+			<div id="cardCreate"class="row pad-row">
 
 			<!--Human Card  -->
 				<div class="col s12 m6 l4">
@@ -102,7 +105,9 @@
 			<div class="row pad-row">
 				<div class="col l6 s12">
 					<h5 class="white-text">Task<span class="navbar-logo">++</span></h5>
-					<p class="grey-text text-lighten-4">We are a team of students from the University of Utah's Coding Bootcamp. Please check out GitHub page to leave any comments for feedback, any support is apperciated and welcome.</p>
+
+					<p class="grey-text text-lighten-4">We are a team of students from the University of Utah's Coding Bootcamp. Please check out our <a href="https://github.com/alex-117/WUNC-inc">Github</a> page to leave any comments for feedback, any support is appreciated and welcome.</p>
+
 				</div>
 				<div class="col l3 s12">
 					<h5 class="white-text">WUNC Inc.</h5>
@@ -126,12 +131,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				<p>WUNC Inc. &copy; 2017 Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a></p>
-				<!-- <br><br> -->
-			</div>
-		</div>
+    <div class="footer-copyright">
+      <div class="container">
+      <p class="right">WUNC Inc. &copy;2017 Made with <a class="white-text" href="http://materializecss.com">Materialize</a> || <a class="white-text" href="https://firebase.google.com/">Firebase</a> || <a class="white-text" href="https://giphy.com/">GIPHY</a></p>
+
+      </div>
+    </div>
 	</footer>
 
 
@@ -159,7 +164,7 @@
     	<div class="add-task-wrapper">
 				<div class="row">
 				    <div class="input-field col s12">
-					    <select multiple placeholder="name" name="userName">
+					    <select multiple id="selectUser" placeholder="name" name="userName">
 				   	      <option value="0" disabled selected>Select Child</option>
 					      <option value="marcia">Marcia</option>
 					      
@@ -256,7 +261,7 @@
 				    		</div>
 				        </div>
 				      </div>
-				      <a class="waves-effect waves-light btn submit">Submit</a>
+				      <a id="submitUser" class="waves-effect waves-light btn submit">Submit</a>
 				  	</form>
 	  			</div>
 		    </div>

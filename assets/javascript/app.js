@@ -17,14 +17,19 @@
 	
 
 
-
-
+//Thongvun's
+// var tBoo = false;
 
 //html js
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
 //for the modal
 	 $('.modal').modal();
+//thongvun test
+// if (tBoo == true) {
+// 	createLastNameLi();
+// }
+
 })
 // lines 26-30 can go//////////
 
@@ -227,6 +232,7 @@ database.ref().on("child_added", function (snapshot) {
 
 
 	$('#parent > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
+
 	dateDueBy + " @ " + taskDueBy + "</td><td>");
 });
 
@@ -240,9 +246,6 @@ $('body').on('click', '#checkbox', function() {
 	}
 
 });
-
-
-
 
 /**********************************************/
 /*************child-modal.html*****************/
@@ -297,16 +300,18 @@ $(".good-job-gif").on("click", function(event) {
 
 //Sign-Up Button
 $("#user-LogIn").on("click", function() {
-    event.preventDefault();
+	event.preventDefault();
 
     var signFirstName = $('#first-name').val().trim();
     var signLastName = $('#last-name').val().trim();
 	var signEmail = $('#txt-email').val().trim();
 	// var signLastName = $('#IMG').val().trim(); UPDATE LATER FOR SAVED IMG?
-    var signPassword = $('#txt-password').val().trim();
-
+	var signPassword = $('#txt-password').val().trim();
+	
     //Clears previous values
-    $(this).closest('form').find("input[type=text], textarea").val("");
+	$(this).closest('form').find("input[type=text], textarea").val("");
+	$("#txt-email").val("");
+	$("#txit-password").val("");
 
     // Database push
     database.ref().push({
@@ -314,9 +319,86 @@ $("#user-LogIn").on("click", function() {
         dbLastName: signLastName,
         dbEmail: signEmail,
         dbPassword: signPassword
-    });
+	});
+	
+	//Goes to user page
+	// tboo = true;
+	window.location.href='user-page.html';
+
+
+// <a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a>
 
 });//End sign-up button listener
+
+//Thongvuns
+// function createLastNameLi() {
+// 	var displayLastName = signLastName;
+// 	var jQueryLi = "<a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class='material-icons right'>" + "keyboard_arrow_down" + "</i>" + displayLastName + " " + "Family" + "</a>";
+
+// 	$('#jLastName').append(jQueryLi);
+
+// }
+
+	
+
+
+
+
+
+
+
+
+/**********************************************/
+/****************create card*******************/
+/**************create user tab*****************/
+/**********************************************/
+
+function createCard() {
+	var idFirst = $("#first_name").val();
+	var idLast = $("#last_name").val();
+
+	var divWrapper = $("<div class='col s12 m6 l4'>");
+	var divCard = $("<div class='card'>");
+	var divCardImg = $("<div class='card-image waves-effect waves-block waves-light'><img class='activator' src='assets/image/brady_marcia.png'></div>");
+	var divContent = $("<div class='card-content'><span id='add-name' class='card-title activator text-darken-4'>" + idFirst + " " + idLast + "<i class='material-icons right'>add</i></span></div>");
+	var divCardReveal = $("<div class='card-reveal'>");
+	var spanCardTitle = $("<span class='card-title text-darken-4'>" + idFirst + "'s Tasks:" + "<i class='material-icons right'>close</i></span>")
+	var table = $("<table id=" + idFirst + " class='table'><thead><tr><th class='task'><span>Task:</span></th><th>Due By:</th></tr></thead><tbody></tbody></table>");
+
+	divCardReveal.append(spanCardTitle).append(table);
+	divCard.append(divCardImg).append(divContent).append(divCardReveal);
+	divWrapper.append(divCard);
+
+	$("#cardCreate").append(divWrapper);
+
+}
+
+function addUserTab() {
+	var idFirst = $("#first_name").val();
+	var tabLi = $("<li class='tab col s3'><a href=" + idFirst + "</a>" + idFirst + "</li>");
+	var divTable = $("<div id =" + idFirst + " class='col s12'>");
+	var table = $("<table class='parent-task-table' id="+ idFirst + "><thead><tr><th>Description</th><th>Points</th><th>Status</th><th>Edit</th></tr></thead><tbody></tbody></table>");
+	var select = $("<li class><span><input type='checkbox'><label></label>"+ idFirst + "</span></li>");
+	var option = $("<option value=" + idFirst + ">" + idFirst + "</option>");
+
+	$(".tabs").prepend(tabLi);
+	divTable.append(table);
+	$(".personTaskInfo").append(divTable);
+	$("#selectUser").append(option);
+}
+
+$("#submitUser").on("click", function() {
+	createCard();
+	addUserTab(); 
+});
+
+
+
+/**********************************************/
+/**************end create card*****************/
+/************end create user tab***************/
+/**********************************************/
+
 
 
 
