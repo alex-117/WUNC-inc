@@ -24,7 +24,7 @@ $( document ).ready(function(){
 //for the modal
 	 $('.modal').modal();
 })
-
+// lines 26-30 can go//////////
 
 //task form - dropdown btns
 $(document).ready(function() {
@@ -65,11 +65,41 @@ $('.modal-trigger').on('click', function() {
 	$('#add-task-wrapper').hide();
 })
 
-
+var addTask;
 //show add task forms on button click.....still not working
-$('#addTask').on('click', function() {
-	$('#add-task-wrapper').show();
-})
+// $('.addTaskBtn').on('click', function() {
+// 	console.log("clicked");
+// 	var taskWrapper = $(".add-task-wrapper").html();
+// 	if(!addTask) {
+// 		$('.parent-task-table').hide();
+// 		$('.add-task-table').append(taskWrapper);
+// 		$(taskWrapper).show();
+// 		addTask = true;
+// 	} else if(addTask) {
+// 		$('.parent-task-table').show();
+// 		$('.add-task-table').empty();
+// 		addTask = false;
+// 	}
+// });
+
+
+$('.addTaskBtn').on('click', function() {
+	console.log("clicked");
+	if(!addTask) {
+		$('.test').hide();
+		$('.add-task-wrapper').show();
+		addTask = true;
+	} else if(addTask) {
+		$('.test').show();
+		$('.add-task-wrapper').hide();
+		addTask = false;
+	}
+});
+
+
+
+
+
 
 	//profile child 
 		//firebase link to add tasks from parent modal to child card div
@@ -202,6 +232,7 @@ $('#applyTask').on("click", function (event) {
 
 
 
+
 	
 
 	//append data to child page
@@ -217,6 +248,7 @@ $('#applyTask').on("click", function (event) {
 	//$('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
 	//dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
 	//append data to parent page
+
 
 	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
 	dateDueBy + " @ " + taskDueBy + "</td><td>");
