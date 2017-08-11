@@ -6,7 +6,7 @@ html,
 body {
 	font-family: 'Nunito Sans', sans-serif;
     background-color: #85A5CC;
-    color: #D0E4F2;
+    color: #1A1F2B;
 }
 
 input {
@@ -219,6 +219,20 @@ container .cont-bg-image {
 .pad-row {
     width: 85%;
 }
+
+.user-signIn {
+/*    background-color: black;*/
+text-decoration: bold;
+}
+
+h1 {
+    color: #fff;
+}
+
+h5 {
+    color: #fff;
+}
+
 
 /*Social media icons  */
 /* Style all font awesome icons */
