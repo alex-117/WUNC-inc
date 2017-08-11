@@ -17,14 +17,19 @@
 	
 
 
-
-
+//Thongvun's
+// var tBoo = false;
 
 //html js
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
 //for the modal
 	 $('.modal').modal();
+//thongvun test
+// if (tBoo == true) {
+// 	createLastNameLi();
+// }
+
 })
 // lines 26-30 can go//////////
 
@@ -241,9 +246,6 @@ $('body').on('click', '#checkbox', function() {
 
 });
 
-
-
-
 /**********************************************/
 /*************child-modal.html*****************/
 /**********************************************/
@@ -297,16 +299,18 @@ $(".good-job-gif").on("click", function(event) {
 
 //Sign-Up Button
 $("#user-LogIn").on("click", function() {
-    event.preventDefault();
+	event.preventDefault();
 
     var signFirstName = $('#first-name').val().trim();
     var signLastName = $('#last-name').val().trim();
 	var signEmail = $('#txt-email').val().trim();
 	// var signLastName = $('#IMG').val().trim(); UPDATE LATER FOR SAVED IMG?
-    var signPassword = $('#txt-password').val().trim();
-
+	var signPassword = $('#txt-password').val().trim();
+	
     //Clears previous values
-    $(this).closest('form').find("input[type=text], textarea").val("");
+	$(this).closest('form').find("input[type=text], textarea").val("");
+	$("#txt-email").val("");
+	$("#txit-password").val("");
 
     // Database push
     database.ref().push({
@@ -314,9 +318,31 @@ $("#user-LogIn").on("click", function() {
         dbLastName: signLastName,
         dbEmail: signEmail,
         dbPassword: signPassword
-    });
+	});
+	
+	//Goes to user page
+	// tboo = true;
+	window.location.href='user-page.html';
+
+
+// <a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class="material-icons right">keyboard_arrow_down</i>Brady Family</a>
 
 });//End sign-up button listener
+
+//Thongvuns
+// function createLastNameLi() {
+// 	var displayLastName = signLastName;
+// 	var jQueryLi = "<a class='dropdown-button btn' href='#' data-activates='dropdown1'><i class='material-icons right'>" + "keyboard_arrow_down" + "</i>" + displayLastName + " " + "Family" + "</a>";
+
+// 	$('#jLastName').append(jQueryLi);
+
+// }
+
+	
+
+
+
+
 
 
 
