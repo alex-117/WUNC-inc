@@ -14,10 +14,10 @@ input {
 }
 
 /*Header*/
-nav,  {
+nav, .page-footer {
 	background-color: transparent; 
     position: absolute;
-    top: 0px;
+    top: 890px;
     width: 100%;
 }
 
@@ -69,22 +69,7 @@ nav .nav-wrapper {
 }
 
 .hero-text {
-    margin-top: 10%;
-}
-
-#download-button {
-    background-color: rgba(133, 165, 204, 0.37);
-    color: #3c3c3c;
-    box-shadow: none;
-    border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 30px;
-}
-
-#download-button:hover {
-    background-color: #7f9cc0;
-    color: white;
-    box-shadow: none;
-    border: 0px;
+    margin-top: 14%;
 }
 
 /*mobile collapse*/
@@ -244,9 +229,9 @@ nav .nav-wrapper {
 
 /*"HomePage  */
 .cont-bg-image {
-    background-image: url(../image/family-beach.jpg);
+    background-image: url(../image/background1.jpg);
     background-size: cover;
-    height: 66vh;
+    height: 600px;
     /* opacity: 0.5; */
     width: 100%;
     position: absolute;
@@ -290,18 +275,11 @@ h1 {
 }
 
 h5 {
-    color: #000;
+    color: #fff;
 }
 
 a {
     color: #445569;
-}
-
-.page-footer {
-    background-color: transparent; 
-    position: absolute;
-    top: 890px;
-    width: 100%;
 }
 
 
