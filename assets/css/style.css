@@ -220,6 +220,20 @@ container .cont-bg-image {
     width: 85%;
 }
 
+.user-signIn {
+/*    background-color: black;*/
+text-decoration: bold;
+}
+
+h1 {
+    color: #fff;
+}
+
+h5 {
+    color: #fff;
+}
+
+
 /*Social media icons  */
 /* Style all font awesome icons */
 .fa {
