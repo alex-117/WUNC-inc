@@ -85,7 +85,8 @@ nav .brand-logo {
 
 .modal {
 	background-color: white;
-	height: 50%;
+	height: 100%;
+	width: 1140px;
 }
 
 .tabs .tab a:hover {
@@ -105,6 +106,7 @@ nav .brand-logo {
 	border: 1px solid #DCDCDC;
 	padding: 50px;
 	height: 490px;
+	display: none;
 }
 
 .tabs .tab a {
@@ -136,6 +138,19 @@ nav .brand-logo {
     background-color: #99cc33;
 }
 
+#add-task-close {
+	position: fixed;
+	top: 5px;
+	left: 93%;
+	padding: 0;
+	width: 50px;
+}
+
+#add-task-close .material-icons {
+	width: 100%;
+
+}
+
 .modal .modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: white;
@@ -144,6 +159,7 @@ nav .brand-logo {
     width: 100%;
     text-align: right;
 }
+
 
 #checkbox:hover {
     cursor: pointer;
@@ -171,10 +187,6 @@ nav .brand-logo {
     padding: 14px 16px;
 }
 
-.checkbox {
-    color: green;
-}
-
 /* .due-by {
 	position: absolute;
 	left: 300px;
@@ -184,4 +196,65 @@ nav .brand-logo {
 	position: relative;
 	 left: 60px; 
 } */
+
+/**********************************************/
+/******************GIPHY API*******************/
+/**********************************************/
+.gif {
+	width: 250px;
+	height: 200px;
+}
+
+/**********************************************/
+/****************END GIPHY API*****************/
+/**********************************************/
+
+
+
+/**********************************************/
+/******************Mobile CSS******************/
+/**********************************************/
+
+#person-display {
+	margin: 0 auto;
+	float: none;
+}
+
+
+
+
+/**********************************************/
+/**************END: Mobile CSS*****************/
+/**********************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
