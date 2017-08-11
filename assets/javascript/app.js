@@ -226,7 +226,7 @@ database.ref().on("child_added", function (snapshot) {
 //add reload to keep data on cards here
 
 
-	$('.parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
+	$('#parent > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
 	dateDueBy + " @ " + taskDueBy + "</td><td>");
 });
 
