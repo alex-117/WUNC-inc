@@ -72,14 +72,19 @@ var addTask;
 $('.addTaskBtn').on('click', function() {
 	console.log("clicked");
 	if(!addTask) {
-		$('.test').hide();
+		$('.personTaskInfo').hide();
 		$('.add-task-wrapper').show();
 		addTask = true;
 	} else if(addTask) {
-		$('.test').show();
+		$('.personTaskInfo').show();
 		$('.add-task-wrapper').hide();
 		addTask = false;
 	}
+});
+
+$("#applyTask").on("click", function(event) {
+	$(".add-task-wrapper").hide();
+	$(".personTaskInfo").show();
 });
 
 
