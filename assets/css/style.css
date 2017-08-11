@@ -75,6 +75,10 @@ nav .brand-logo {
 	color: black;
 }
 
+.card {
+    
+}
+
 
 /*----------modal----------*/
 
@@ -165,6 +169,10 @@ nav .brand-logo {
     display: block;
     line-height: 22px;
     padding: 14px 16px;
+}
+
+.checkbox {
+    color: green;
 }
 
 /* .due-by {
