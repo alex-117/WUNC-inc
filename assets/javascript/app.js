@@ -250,8 +250,9 @@ $('#applyTask').on("click", function (event) {
 	//append data to parent page
 
 
-	$('#parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
+	$('.parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
 	dateDueBy + " @ " + taskDueBy + "</td><td>");
+});
 
 //------ click check boxes
 $('body').on('click', '#checkbox', function() {
