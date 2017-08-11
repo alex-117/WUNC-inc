@@ -218,22 +218,7 @@ database.ref().on("child_added", function (snapshot) {
 
 
 
-
-	
-
-	//append data to child page
-// $('select[name="userName"]').change(function() {
-//     if ($(this).val() == "1") {
-//         $('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-//     } else if ($(this).val() == "2") {
-//         $('#bobby > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
-// 	dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-//     }
-//});
-
-	//$('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
-	//dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-	//append data to parent page
+//add reload to keep data on cards here
 
 
 	$('.parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
