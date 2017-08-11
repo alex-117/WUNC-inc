@@ -157,6 +157,33 @@ nav .brand-logo {
 }
 
 
+#checkbox:hover {
+    cursor: pointer;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    height: 64px;
+    padding-top: 15px;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+    background-color: rgba(63, 75, 82, 0.54);
+    box-shadow: none;
+    height: 64px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 16px;
+    color: black;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+
+
 /* .due-by {
 	position: absolute;
 	left: 300px;
