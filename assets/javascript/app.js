@@ -72,14 +72,19 @@ var addTask;
 $('.addTaskBtn').on('click', function() {
 	console.log("clicked");
 	if(!addTask) {
-		$('.test').hide();
+		$('.personTaskInfo').hide();
 		$('.add-task-wrapper').show();
 		addTask = true;
 	} else if(addTask) {
-		$('.test').show();
+		$('.personTaskInfo').show();
 		$('.add-task-wrapper').hide();
 		addTask = false;
 	}
+});
+
+$("#applyTask").on("click", function(event) {
+	$(".add-task-wrapper").hide();
+	$(".personTaskInfo").show();
 });
 
 
@@ -218,22 +223,7 @@ database.ref().on("child_added", function (snapshot) {
 
 
 
-
-	
-
-	//append data to child page
-// $('select[name="userName"]').change(function() {
-//     if ($(this).val() == "1") {
-//         $('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" + dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-//     } else if ($(this).val() == "2") {
-//         $('#bobby > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
-// 	dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-//     }
-//});
-
-	//$('#marcia > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i>" + taskName + "</td><td>" +
-	//dateDueBy  + " @ " + taskDueBy +  "</td></tr>");
-	//append data to parent page
+//add reload to keep data on cards here
 
 
 	$('.parent-task-table > tbody').append("<tr><td><i class='material-icons lef'>check_box_outline_blank</i> " + taskName + "</td><td>" + taskReward + "</td><td>" +
@@ -293,7 +283,40 @@ $(".good-job-gif").on("click", function(event) {
 
 
 
+// *****Sign-Up Javascript - Thongvun's Don't touch
+// Firebase event
+    database.ref().on('child_added', function(childSnapshot){
 
+    var theChild = childSnapshot.val();
+    var displayFirstName = childSnapshot.val().dbFirstName;
+    var displayLastName = childSnapshot.val().dbLastName;
+    var displayEmail = childSnapshot.val().dbEmail;
+    var displayPassword = childSnapshot.val().dbPassword;
+
+});//End database.ref.on
+
+//Sign-Up Button
+$("#user-LogIn").on("click", function() {
+    event.preventDefault();
+
+    var signFirstName = $('#first-name').val().trim();
+    var signLastName = $('#last-name').val().trim();
+	var signEmail = $('#txt-email').val().trim();
+	// var signLastName = $('#IMG').val().trim(); UPDATE LATER FOR SAVED IMG?
+    var signPassword = $('#txt-password').val().trim();
+
+    //Clears previous values
+    $(this).closest('form').find("input[type=text], textarea").val("");
+
+    // Database push
+    database.ref().push({
+        dbFirstName: signFirstName,
+        dbLastName: signLastName,
+        dbEmail: signEmail,
+        dbPassword: signPassword
+    });
+
+});//End sign-up button listener
 
 
 
