@@ -299,7 +299,7 @@ $(".good-job-gif").on("click", function(event) {
 });//End database.ref.on
 
 //Sign-Up Button
-$("#btnSignIn").on("click", function() {
+$("#btnSignUp").on("click", function() {
 	event.preventDefault();
 
     var signFirstName = $('#first-name').val().trim();
