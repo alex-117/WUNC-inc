@@ -422,52 +422,52 @@ $("#submitUser").on("click", function() {
 /**********************************************/
 
 
-// *****Firebase Authentication
-//Get Elements
-    const first-name = document.getElementById('first-name');
-    const last-name = document.getElementById('last-name');
-	const txt-email = document.getElementById('txt-email');
-	const txt-password = document.getElementById('txt-password');
+// // *****Firebase Authentication
+// //Get Elements
+//     const first-name = document.getElementById('first-name');
+//     const last-name = document.getElementById('last-name');
+// 	const txt-email = document.getElementById('txt-email');
+// 	const txt-password = document.getElementById('txt-password');
 
-	const btnLogIn = document.getElementById('btnLogIn');
-	const btnSignIn = document.getElementById('btnSignIn');
-	const btnLogOut = document.getElementById('btnLogOut');
+// 	const btnLogIn = document.getElementById('btnLogIn');
+// 	const btnSignIn = document.getElementById('btnSignIn');
+// 	const btnLogOut = document.getElementById('btnLogOut');
 
-//Log in Event
-	btnLogIn.addEventListener('click', e=> {
-		//Get email and pass
-		const email = txt-email.value;
-		const pass = txt-password.value;
-		const auth = firebase.auth();
-		//Sign In
-		const promise = auth.signInWithEmailAndPassword(email, pass);
-		promise.catch(e => console.log(e.message));
-	});
+// //Log in Event
+// 	btnLogIn.addEventListener('click', e=> {
+// 		//Get email and pass
+// 		const email = txt-email.value;
+// 		const pass = txt-password.value;
+// 		const auth = firebase.auth();
+// 		//Sign In
+// 		const promise = auth.signInWithEmailAndPassword(email, pass);
+// 		promise.catch(e => console.log(e.message));
+// 	});
 
-	//Sign up Event
-	btnSignIn.addEventListener('click', e=> {
-		//Get email and pass
-		const email = txt-email.value;
-		const pass = txt-password.value;
-		const auth = firebase.auth();
-		//Sign In
-		const promise = auth.createUserWithEmailAndPassword(email, pass);
-		promise.catch(e => console.log(e.message));
-	});
+// 	//Sign up Event
+// 	btnSignIn.addEventListener('click', e=> {
+// 		//Get email and pass
+// 		const email = txt-email.value;
+// 		const pass = txt-password.value;
+// 		const auth = firebase.auth();
+// 		//Sign In
+// 		const promise = auth.createUserWithEmailAndPassword(email, pass);
+// 		promise.catch(e => console.log(e.message));
+// 	});
 
-	//Logout button
-	btnLogOut.addEventListener('click', e => {
-		firebase.auth().signOut();
-	});
+// 	//Logout button
+// 	btnLogOut.addEventListener('click', e => {
+// 		firebase.auth().signOut();
+// 	});
 
-	//Add a realtime listener
-	firebase.auth().onAuthStateChanged(firebase => {
-		if (firebase) {
-			btnLogOut.classList.remove('hide');
-		} else {
-			btnLogOut.classList.add('hide');
-		}
-	});
+// 	//Add a realtime listener
+// 	firebase.auth().onAuthStateChanged(firebase => {
+// 		if (firebase) {
+// 			btnLogOut.classList.remove('hide');
+// 		} else {
+// 			btnLogOut.classList.add('hide');
+// 		}
+// 	});
 
 
 
