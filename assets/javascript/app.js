@@ -192,12 +192,12 @@ $('#applyTask').on("click", function (event) {
 	}
 	
 
-	// test to make sure it works
-	console.log("User Name: " + newTask.user);
-	console.log("Task Name: " + newTask.name);
-	console.log("Task Reward: " + newTask.reward);
-	console.log("Task Due By: " + newTask.timeDueBy);
-	console.log("Task date: " + newTask.dateDueBy)
+	// // test to make sure it works
+	// console.log("User Name: " + newTask.user);
+	// console.log("Task Name: " + newTask.name);
+	// console.log("Task Reward: " + newTask.reward);
+	// console.log("Task Due By: " + newTask.timeDueBy);
+	// console.log("Task date: " + newTask.dateDueBy)
 
 	// Clears all of the input boxes
 	$('select[name="userName"]').val("");
@@ -251,6 +251,7 @@ $('body').on('click', '#checkbox', function() {
 /*************child-modal.html*****************/
 /**********************************************/
 function displayGif() {
+	event.preventDefault();
 	var queryURL = "https://api.giphy.com/v1/gifs/q5J2HfnH8mCvS?api_key=dc6zaTOxFJmzC";
 
 
@@ -354,13 +355,14 @@ $("#user-LogIn").on("click", function() {
 /**********************************************/
 
 function createCard() {
+	event.preventDefault();
 	var idFirst = $("#first_name").val();
 	var idLast = $("#last_name").val();
 
 	var divWrapper = $("<div class='col s12 m6 l4'>");
 	var divCard = $("<div class='card'>");
 	var divCardImg = $("<div class='card-image waves-effect waves-block waves-light'><img class='activator' src='assets/image/brady_marcia.png'></div>");
-	var divContent = $("<div class='card-content'><span id='add-name' class='card-title activator text-darken-4'>" + idFirst + " " + idLast + "<i class='material-icons right'>add</i></span></div>");
+	var divContent = $("<div class='card-content'><span id='add-name' class='card-title activator text-darken-4'>" + idFirst + " " + idLast + "<i class='material-icons right' id='childMold'>add</i></span></div>");
 	var divCardReveal = $("<div class='card-reveal'>");
 	var spanCardTitle = $("<span class='card-title text-darken-4'>" + idFirst + "'s Tasks:" + "<i class='material-icons right'>close</i></span>")
 	var table = $("<table id=" + idFirst + " class='table'><thead><tr><th class='task'><span>Task:</span></th><th>Due By:</th></tr></thead><tbody></tbody></table>");
@@ -371,20 +373,28 @@ function createCard() {
 
 	$("#cardCreate").append(divWrapper);
 
-}
+};
+
+
+
 
 function addUserTab() {
+	event.preventDefault();
 	var idFirst = $("#first_name").val();
-	var tabLi = $("<li class='tab col s3'><a href=" + idFirst + "</a>" + idFirst + "</li>");
+	var tabLi = $("<li class='tab col s3'><a href=" + idFirst + " " + "id=" + idFirst + " " + "</a>" + idFirst + "</li>");
 	var divTable = $("<div id =" + idFirst + " class='col s12'>");
 	var table = $("<table class='parent-task-table' id="+ idFirst + "><thead><tr><th>Description</th><th>Points</th><th>Status</th><th>Edit</th></tr></thead><tbody></tbody></table>");
+	var addClassBtn = $("<hr><a class='waves-effect waves-light btn add-task addTaskBtn' id='addTaskBtn'><i class='material-icons left'>add</i>Add Task</a>");
 	var select = $("<li class><span><input type='checkbox'><label></label>"+ idFirst + "</span></li>");
 	var option = $("<option value=" + idFirst + ">" + idFirst + "</option>");
 
 	$(".tabs").prepend(tabLi);
-	divTable.append(table);
+	divTable.prepend(table);
+	table.append(addClassBtn);
 	$(".personTaskInfo").append(divTable);
 	$("#selectUser").append(option);
+	$('select').material_select();
+
 }
 
 $("#submitUser").on("click", function() {
@@ -392,8 +402,20 @@ $("#submitUser").on("click", function() {
 	addUserTab(); 
 });
 
+ $('.dropdown-button').dropdown('close');
 
+  $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    });
 
+    
 /**********************************************/
 /**************end create card*****************/
 /************end create user tab***************/
@@ -405,6 +427,10 @@ $("#submitUser").on("click", function() {
 
 
 
+// links the hardcoded html files "+" button to open child-modal.html...cant get it to work on created cards yet;
+$("#childMold").on("click", function() {
+	event.preventDefault();
+	window.location.href='child-modal.html'});
 
 
 
@@ -416,6 +442,13 @@ $("#submitUser").on("click", function() {
 
 
 
+//what still doesn't work:
+//The giphy no longer appears on the child-modal.html see line 430 for how to get there from user page
+//adding a new user creates an add task button and new table on every tab every single time. 
+//also the add task button that gets created doesn't actually work and isn't css'd correctly(sorry josh)
+//signing up takes you straight to the brady bunch page contrary to what last name you inserted on the sign up page
+//when a new task is created it pushes to the hard-coded table and starts to code to the new user's tab
+//on the plus side, if a new task is only added to marcia it will not appear on the new user's tab-table!
 
-
-
+//that's all I can think of for now, I've done all I can do for now. However, the new card generates and stores
+//the user's tasks and pushes them to the card and the initial parent table(not the newly created one)

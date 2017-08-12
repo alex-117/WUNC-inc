@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 	<!-- local css -->
 	<link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -57,7 +58,7 @@
 		<div class="section">
 
 			<div class="row pad-row center">
-				<h3 class="navbar-logo">Welcome back, $<<name>>!</h3>
+				<h3 class="navbar-logo">Welcome back, Family!</h3>
 			</div>
 
 			<div id="cardCreate"class="row pad-row">
@@ -69,7 +70,7 @@
 							<img class="activator" src="assets/image/brady_marcia.png">
 						</div>
 						<div class="card-content">
-							<span class="card-title activator text-darken-4">Marcia Brady<i class="material-icons right">add</i></span>
+							<span class="card-title activator text-darken-4">Marcia Brady<i class="material-icons right" id='childMold'>add</i></span>
 							<!-- <p><a href="#">Project link</a></p> -->
 						</div>
 						<div class="card-reveal">
@@ -160,12 +161,11 @@
 	<!-- Modal Structure -->
 <div id="modal1" class="modal">
     <div class="modal-content">
-
     	<div class="add-task-wrapper">
 				<div class="row">
 				    <div class="input-field col s12">
 					    <select multiple id="selectUser" placeholder="name" name="userName">
-				   	      <option value="0" disabled selected>Select Child</option>
+				   	      <option value="0" disabled selected>Select User</option>
 					      <option value="marcia">Marcia</option>
 					      
 					    </select>
